@@ -30,7 +30,7 @@ namespace WatchYourWallet.Domain.Entities
         }
 
 
-        public ICollection<Expenses> Expense { get; set; }
+        public ICollection<Expense> Expense { get; set; }
 
         private void ValidateDomain(string name, decimal salary)
         {

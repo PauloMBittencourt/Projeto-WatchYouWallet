@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatchYourWallet.API", "Watc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatchYourWallet.Domain", "WatchYourWallet.Domain\WatchYourWallet.Domain.csproj", "{14690864-437A-4F4D-A640-CA8B1FFE2D2B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatchYourWallet.Infra.Data", "WatchYourWallet.Infra.Data\WatchYourWallet.Infra.Data.csproj", "{1D3A4031-F05B-4F61-9A6C-CEAFB87F38BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatchYourWallet.Infra.IoC", "WatchYourWallet.Infra.IoC\WatchYourWallet.Infra.IoC.csproj", "{A21DB649-CBB6-4BD1-83FC-A301CFD09C31}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{14690864-437A-4F4D-A640-CA8B1FFE2D2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14690864-437A-4F4D-A640-CA8B1FFE2D2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14690864-437A-4F4D-A640-CA8B1FFE2D2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D3A4031-F05B-4F61-9A6C-CEAFB87F38BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D3A4031-F05B-4F61-9A6C-CEAFB87F38BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D3A4031-F05B-4F61-9A6C-CEAFB87F38BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D3A4031-F05B-4F61-9A6C-CEAFB87F38BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A21DB649-CBB6-4BD1-83FC-A301CFD09C31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A21DB649-CBB6-4BD1-83FC-A301CFD09C31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A21DB649-CBB6-4BD1-83FC-A301CFD09C31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A21DB649-CBB6-4BD1-83FC-A301CFD09C31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

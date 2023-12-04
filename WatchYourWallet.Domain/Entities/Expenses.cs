@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WatchYourWallet.Domain.Entities
 {
-    public sealed class Expenses
+    public sealed class Expense
     {
         public int ExpensesId { get; private set; }
         public string Name { get; private set; }
