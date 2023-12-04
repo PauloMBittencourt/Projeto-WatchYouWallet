@@ -4,13 +4,13 @@ namespace WatchYourWallet.Domain.Interfaces
 {
     public interface IExpensesRepository
     {
-        Task<IEnumerable<Expenses>> GetExpenses();
-        Task<Expenses> GetById(int id);
-        Task<Expenses> CreateExpense(Expenses expenses);
-        Task<Expenses> UpdateExpense(Expenses expenses);
-        Task<Expenses> RemoveExpense(Expenses expenses);
+        Task<IEnumerable<Expense>> GetExpenses();
+        Task<Expense> GetById(int id);
+        Task<Expense> CreateExpense(Expense expenses);
+        Task<Expense> UpdateExpense(Expense expenses);
+        Task<Expense> RemoveExpense(Expense expenses);
 
-        Task<Expenses> GetUsersExpensesAsync(int id);
+        Task<Expense> GetUsersExpensesAsync(int id);
 
     }
 }

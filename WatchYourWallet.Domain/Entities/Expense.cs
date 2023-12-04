@@ -8,19 +8,19 @@ using WatchYourWallet.Domain.Validations;
 
 namespace WatchYourWallet.Domain.Entities
 {
-    public sealed class Expenses : EntityBase
+    public sealed class Expense : EntityBase
     {
         public string Name { get; private set; }
         public decimal Value { get; private set; }
         public DateTime InitialDate { get; private set; }
         public DateTime LastDate { get; private set; }
 
-        public Expenses(string name, decimal value, DateTime initialDate, DateTime lastDate)
+        public Expense(string name, decimal value, DateTime initialDate, DateTime lastDate)
         {
             ValidateDomain(name, value, initialDate, lastDate);
         }
         
-        public Expenses(int expensesId, string name, decimal value, DateTime initialDate, DateTime lastDate)
+        public Expense(int expensesId, string name, decimal value, DateTime initialDate, DateTime lastDate)
         {
             //Validação do ID
             DomainExceptionValidation.When(expensesId < 0, "O ID é inválido, precisa ser maior que 0.");
