@@ -1,37 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using WatchYourWallet.Domain.Entities.Base;
 using WatchYourWallet.Domain.Validations;
 
 namespace WatchYourWallet.Domain.Entities
 {
-    public sealed class User
+    public sealed class User : EntityBase
     {
-        public int UserId { get; private set; }
         public string Name { get; private set; }
-        public decimal? Salary { get; private set; }
-
-        public User(int userId, string name, decimal salary)
-        {
-
-            UserId = userId;
-            Name = name;
-            Salary = salary;
-        }
+        public decimal Salary { get; private set; }
 
         public User(string name, decimal salary)
         {
             ValidateDomain(name, salary);
-
-            Name = name;
-            Salary = salary;
         }
 
+        public User(int userId, string name, decimal salary)
+        {
+            //Validação do ID
+            DomainExceptionValidation.When(userId < 0, "O ID é inválido, precisa ser maior que 0.");
+            Id = userId;
+
+            ValidateDomain(name, salary);
+        }
+
+        public void Update(User user)
+        {
+            ValidateDomain(user.Name, user.Salary);
+        }
 
         public ICollection<Expense> Expense { get; set; }
 
+        #region Validações
         private void ValidateDomain(string name, decimal salary)
         {
             //Validação do Nome
@@ -41,8 +39,9 @@ namespace WatchYourWallet.Domain.Entities
 
             //Validação do Salário
             DomainExceptionValidation.When(decimal.IsNegative(salary), "O valor do salário é invalido.");
-            DomainExceptionValidation.When(salary.Equals(null) , "O valor do salário é obrigatório.");
+            DomainExceptionValidation.When(salary.Equals(null), "O valor do salário é obrigatório.");
             Salary = salary;
-        }
+        } 
+        #endregion
     }
 }
